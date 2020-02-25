@@ -10,7 +10,7 @@
       },
       "root": "apps/booking-web-app",
       "sourceRoot": "apps/booking-web-app/src",
-      "prefix": "nx-feature-shell-variation",
+      "prefix": "aap",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -121,6 +121,175 @@
             "tsConfig": ["apps/booking-web-app-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/booking-web-app-e2e/**"]
           }
+        }
+      }
+    },
+    "booking-feature-shell": {
+      "projectType": "library",
+      "root": "libs/booking/feature-shell",
+      "sourceRoot": "libs/booking/feature-shell/src",
+      "prefix": "aap",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/booking/feature-shell/tsconfig.lib.json",
+              "libs/booking/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/booking/feature-shell/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/booking/feature-shell/jest.config.js",
+            "tsConfig": "libs/booking/feature-shell/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/booking/feature-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "booking-feature-flight-search": {
+      "projectType": "library",
+      "root": "libs/booking/feature-flight-search",
+      "sourceRoot": "libs/booking/feature-flight-search/src",
+      "prefix": "aap",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/booking/feature-flight-search/tsconfig.lib.json",
+              "libs/booking/feature-flight-search/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/booking/feature-flight-search/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/booking/feature-flight-search/jest.config.js",
+            "tsConfig": "libs/booking/feature-flight-search/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/booking/feature-flight-search/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "booking-feature-passenger-info": {
+      "projectType": "library",
+      "root": "libs/booking/feature-passenger-info",
+      "sourceRoot": "libs/booking/feature-passenger-info/src",
+      "prefix": "aap",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/booking/feature-passenger-info/tsconfig.lib.json",
+              "libs/booking/feature-passenger-info/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/booking/feature-passenger-info/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/booking/feature-passenger-info/jest.config.js",
+            "tsConfig": "libs/booking/feature-passenger-info/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/booking/feature-passenger-info/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-feature-seat-listing": {
+      "projectType": "library",
+      "root": "libs/shared/feature-seat-listing",
+      "sourceRoot": "libs/shared/feature-seat-listing/src",
+      "prefix": "aap",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/feature-seat-listing/tsconfig.lib.json",
+              "libs/shared/feature-seat-listing/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/feature-seat-listing/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/feature-seat-listing/jest.config.js",
+            "tsConfig": "libs/shared/feature-seat-listing/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/feature-seat-listing/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-ui": {
+      "projectType": "library",
+      "root": "libs/shared/ui",
+      "sourceRoot": "libs/shared/ui/src",
+      "prefix": "aap",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui/tsconfig.lib.json",
+              "libs/shared/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui/jest.config.js",
+            "tsConfig": "libs/shared/ui/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }

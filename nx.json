@@ -17,6 +17,21 @@
     "booking-web-app-e2e": {
       "tags": [],
       "implicitDependencies": ["booking-web-app"]
+    },
+    "booking-feature-shell": {
+      "tags": []
+    },
+    "booking-feature-flight-search": {
+      "tags": []
+    },
+    "booking-feature-passenger-info": {
+      "tags": []
+    },
+    "shared-feature-seat-listing": {
+      "tags": []
+    },
+    "shared-ui": {
+      "tags": []
     }
   }
 }
