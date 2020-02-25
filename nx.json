@@ -1,0 +1,22 @@
+{
+  "npmScope": "nx-feature-shell-variation",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "booking-web-app": {
+      "tags": []
+    },
+    "booking-web-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["booking-web-app"]
+    }
+  }
+}
