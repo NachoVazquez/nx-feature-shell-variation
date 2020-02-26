@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '/search',
+    path: 'search',
     pathMatch: 'full',
     loadChildren: () =>
       import('@nx-feature-shell-variation/booking/feature-flight-search').then(
@@ -12,7 +12,7 @@ const routes: Routes = [
       )
   },
   {
-    path: '/passenger',
+    path: 'passenger',
     pathMatch: 'full',
     loadChildren: () =>
       import('@nx-feature-shell-variation/booking/feature-passenger-info').then(
@@ -20,7 +20,7 @@ const routes: Routes = [
       )
   },
   {
-    path: '/seatmap',
+    path: 'seatmap',
     pathMatch: 'full',
     loadChildren: () =>
       import('@nx-feature-shell-variation/shared/feature-seat-listing').then(
@@ -30,6 +30,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forRoot(routes)]
+  imports: [CommonModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class BookingFeatureShellModule {}

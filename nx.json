@@ -32,6 +32,20 @@
     },
     "shared-ui": {
       "tags": []
+    },
+    "booking-desktop-app": {
+      "tags": []
+    },
+    "booking-desktop-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["booking-desktop-app"]
+    },
+    "booking-mobile-app": {
+      "tags": []
+    },
+    "booking-mobile-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["booking-mobile-app"]
     }
   }
 }
