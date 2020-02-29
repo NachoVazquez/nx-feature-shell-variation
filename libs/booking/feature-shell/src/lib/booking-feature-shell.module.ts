@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
+import { TranslocoConfigModule } from '@nx-feature-shell-variation/shared/utils-transloco-config';
+
 const routes: Routes = [
   {
     path: 'search',
@@ -30,7 +32,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes),
+    TranslocoConfigModule.forRoot()
+  ],
   exports: [RouterModule]
 })
 export class BookingFeatureShellModule {}

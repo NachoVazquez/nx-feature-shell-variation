@@ -28,7 +28,10 @@
       "@nx-feature-shell-variation/shared/feature-seat-listing": [
         "libs/shared/feature-seat-listing/src/index.ts"
       ],
-      "@nx-feature-shell-variation/shared/ui": ["libs/shared/ui/src/index.ts"]
+      "@nx-feature-shell-variation/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@nx-feature-shell-variation/shared/utils-transloco-config": [
+        "libs/shared/utils-transloco-config/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

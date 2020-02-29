@@ -46,6 +46,9 @@
     "booking-mobile-app-e2e": {
       "tags": [],
       "implicitDependencies": ["booking-mobile-app"]
+    },
+    "shared-utils-transloco-config": {
+      "tags": ["type:utils", "scope:shared"]
     }
   }
 }
