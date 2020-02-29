@@ -5,7 +5,8 @@ import {
   TRANSLOCO_CONFIG,
   TRANSLOCO_SCOPE,
   TranslocoModule,
-  translocoConfig
+  translocoConfig,
+  AvailableLangs
 } from '@ngneat/transloco';
 
 import { translocoLoader } from './transloco.loader';
@@ -31,7 +32,7 @@ export type AvailableLang = string | { id: string; label: string } | undefined;
 export class TranslocoConfigModule {
   static forRoot(
     prodMode: boolean = false,
-    availableLangs: AvailableLang[] = [
+    availableLangs: AvailableLangs = [
       { id: 'en', label: 'English' },
       { id: 'es', label: 'Español' }
     ]
